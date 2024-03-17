@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>KodeSphere</title>
+  </head>
+  <body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-dark">
+      <div class="container-fluid text-white">
+        <span class="navbar-brand text-white"><h5>KodeSphere</h5></span>
+        <button
+          class="navbar-toggler text-white"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon icon-color"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-white"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-20">
+            <li class="nav-item">
+              <a class="nav-link text-white" aria-current="page" href="/">
+                Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="/Shop"> Shop </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="/Contact"> Contact </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="/Login"> Login </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="/Signup"> Register </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="sec-1" id="sec-1">
+      <div class="text">
+        <h1 style="font-size: 60px">Control Your Devices</h1>
+        <h3 style="font-size: 40px">I'm ready to dive in</h3>
+        <button onclick="scrollDown()">
+          <i style="font-size: 30px" class="fa">&#xf103;</i>
+        </button>
+      </div>
+    </section>
+    <section class="sec-2">
+      <div class="container">
+        <img
+          id="myImage"
+          onclick="changeImage()"
+          src="IMG/bulb-off.png"
+          width="100px"
+          height="180px"
+        />
+      </div>
+    </section>
+
+    <script>
+      function scrollDown() {
+        var text = document.querySelector(".sec-1 .text");
+        text.style.fontSize = "80px";
+        setTimeout(function () {
+          text.style.opacity = "0";
+        }, 1000);
+
+        setTimeout(function () {
+          document.querySelector(".sec-2").scrollIntoView({
+            behavior: "smooth",
+          });
+        }, 2000);
+
+        window.addEventListener("scroll", function () {
+          if (window.scrollY === 0) {
+            text.style.fontSize = "";
+            text.style.opacity = "1";
+          }
+        });
+      }
+      function changeImage() {
+        var image = document.getElementById("myImage");
+        if (isBulbOn) {
+          image.src = "IMG/bulb-off.png";
+          isBulbOn = false;
+        } else {
+          image.src = "IMG/bulb-on.png";
+          isBulbOn = true;
+        }
+      }
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
