@@ -1,29 +1,22 @@
-/* Resetting default styles */
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
 }
-
-/* Styling for navigation */
 nav {
   color: #fff;
 }
-
-/* Styling for icons */
 .icon-color {
   background: #fff;
   color: #fff;
 }
-
-/* Section 1 styles */
 .sec-1 {
   width: 100%;
   height: 100vh;
   padding: 30px;
   color: #ddd;
   text-align: center;
-  background-image: url(IMG/2.jpg);
+  background-image: url(2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -35,10 +28,134 @@ nav {
   transform: translate(-50%, -50%);
   transition: font-size 1s ease, opacity 1s ease;
 }
+input[type="range"] {
+  height: 38px;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+}
+input[type="range"]:focus {
+  outline: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #000000;
+  background: #3071a9;
+  border-radius: 5px;
+  border: 1px solid #000000;
+}
+input[type="range"]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #000000;
+  border: 1px solid #000000;
+  height: 30px;
+  width: 15px;
+  border-radius: 5px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -11px;
+}
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: #3071a9;
+}
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #000000;
+  background: #3071a9;
+  border-radius: 5px;
+  border: 1px solid #000000;
+}
+input[type="range"]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000;
+  border: 1px solid #000000;
+  height: 30px;
+  width: 15px;
+  border-radius: 5px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type="range"]::-ms-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type="range"]::-ms-fill-lower {
+  background: #3071a9;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px #000000;
+}
+input[type="range"]::-ms-fill-upper {
+  background: #3071a9;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px #000000;
+}
+input[type="range"]::-ms-thumb {
+  margin-top: 1px;
+  box-shadow: 1px 1px 1px #000000;
+  border: 1px solid #000000;
+  height: 30px;
+  width: 15px;
+  border-radius: 5px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type="range"]:focus::-ms-fill-lower {
+  background: #3071a9;
+}
+input[type="range"]:focus::-ms-fill-upper {
+  background: #3071a9;
+}
 
+input {
+  box-shadow: 1px 2px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+}
 .sec-1 .text #button {
-  border: 2px solid #111;
   border-radius: 50px;
+  padding: 10px;
+  background-color: #fff;
+  color: #000;
+  animation: glow 2s ease-in infinite;
+}
+@keyframes glow {
+  0% {
+    background-color: #111;
+    color: #fff;
+  }
+  25% {
+    background-color: #061e65; /* Second color */
+    color: #fff;
+    transform: scale(1.2);
+  }
+  50% {
+    background-color: #fff;
+    color: #000;
+    transform: scale(1);
+  }
+  75% {
+    background-color: #061e65; /* Second color */
+    color: #fff;
+    transform: scale(1.2);
+  }
+  100% {
+    background-color: #111;
+    color: #fff;
+    transform: scale(1);
+  }
 }
 
 .fade-out {
@@ -53,8 +170,6 @@ nav {
 .sec-2 .flex .text {
   text-align: center;
 }
-
-/* Footer styles */
 .footer {
   background-color: #282e34;
   color: #fff;
@@ -81,12 +196,12 @@ nav {
 }
 
 .card-title {
-  font-size: 20px; /* Adjust title font size */
-  margin-bottom: 10px; /* Add margin bottom to title */
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
 .card-text {
-  font-size: 16px; /* Adjust text font size */
+  font-size: 16px;
 }
 
 .flex-1,
@@ -97,7 +212,6 @@ nav {
   background-color: #fff;
   border-radius: 8px;
   overflow: hidden;
-  border:2px solid
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
 }
@@ -106,7 +220,6 @@ nav {
   margin-right: 15px;
 }
 
-/* Hover effect on flex items */
 .flex-1:hover,
 .flex-2:hover,
 .flex-3:hover,
@@ -136,4 +249,38 @@ p {
 .flex-4 img {
   width: 120px;
   margin: auto;
+}
+input[type="button"] {
+  background-color: #d66813;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 50px;
+}
+
+input[type="button"]:hover {
+  background-color: #0056b3;
+}
+input[type="text"],
+input[type="number"] {
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .flex {
+    display: block;
+    flex-direction: column;
+  }
 }
